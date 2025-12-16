@@ -1,3 +1,97 @@
+ENGLISH VERSION:
+
+# Reproducibility package: Public procurement in ICT (Compras.gov.br) — data and Python code
+
+This repository contains the `.csv` datasets and the Python (Jupyter) notebook used to support the analyses of my academic paper on public ICT (Information and Communication Technology) contracts within Brazilian federal ministries, covering the 2020–2024 period.
+
+> High-level objective: to diagnose and model procurement patterns and supplier characteristics in ICT contracts, supporting exploratory, inferential, and predictive analyses.
+
+---
+
+## 📄 Related paper
+
+- **Title (working version):** Public Procurement and ICT Contracts in the Brazilian Federal Public Administration: Inferential Analysis Using Data from the Contratos/Compras.gov.br Portal  
+- **Status:** manuscript in preparation for submission/publication.
+
+> Once the paper is published (or accepted), this README will be updated with the full reference/DOI.
+
+---
+
+## 📦 Suggested repository structure
+
+.
+├── notebook/
+│ └── AED_compras.gov_FINAL.ipynb
+├── data/
+│ ├── contratos_1008_com_flags.csv
+│ ├── contratos_amostra_143.csv
+│ ├── amostra_apenas_150_fornecedores.csv
+│ └── contratos_ministerios_consolidados.csv
+├── outputs/
+│ └── (generated figures, tables, and exported files)
+└── README.md
+
+
+---
+
+## 🧾 Included datasets (CSV)
+
+- `contratos_1008_com_flags.csv`: consolidated contracts dataset with derived variables/flags.
+- `contratos_amostra_143.csv`: sample used in part of the inferential and modeling analyses.
+- `amostra_apenas_150_fornecedores.csv`: supplier dataset with enriched variables.
+- `contratos_ministerios_consolidados.csv`: ministry-level consolidation (when applicable).
+
+### CSV delimiter (IMPORTANT)
+- `contratos_1008_com_flags.csv` → typically `sep=";"`
+- `amostra_apenas_150_fornecedores.csv` → typically `sep=";"`
+- `contratos_amostra_143.csv` → `sep=","`
+
+---
+
+## 🧠 What the notebook does
+
+- Exploratory Data Analysis (EDA): descriptive statistics and visualizations.
+- Statistical inference: non-parametric tests and association analyses (when applicable).
+- Modeling: regression models (e.g., OLS/quantile/bootstrap, when applicable).
+- Machine learning (when applicable): Random Forest and XGBoost, including evaluation metrics and interpretation.
+
+---
+
+## 🛠️ Requirements (environment)
+
+Typical libraries used:
+- pandas, numpy, matplotlib, seaborn, scipy
+- scikit-learn
+- statsmodels
+- xgboost
+- imbalanced-learn (if resampling/balancing is used)
+
+---
+
+## ▶️ How to run
+
+### Option A — Anaconda (easiest for beginners)
+1. Install Anaconda.
+2. Open **Anaconda Prompt** and create an environment:
+   ```bash
+   conda create -n comprasgov python=3.11 -y
+   conda activate comprasgov
+
+    Install the main dependencies:
+
+pip install pandas numpy matplotlib seaborn scipy scikit-learn xgboost imbalanced-learn statsmodels
+
+Start Jupyter:
+
+    jupyter notebook
+
+    Open notebook/AED_compras.gov_FINAL.ipynb and run the cells from top to bottom.
+
+======================================================================================================
+======================================================================================================
+
+VERSÂO PORTUGUÊS:
+
 # Reprodutibilidade do artigo: Compras públicas em TIC (Compras.gov.br) — dados e código em Python
 
 Este repositório reúne os dados (.csv) e o notebook em Python (Jupyter) utilizados para dar suporte às análises do meu artigo acadêmico sobre contratos públicos de Informática (TIC) no âmbito de ministérios federais brasileiros, com recorte 2020–2024.
