@@ -1,0 +1,87 @@
+# Reprodutibilidade do artigo: Compras públicas em TIC (Compras.gov.br) — dados e código em Python
+
+Este repositório reúne os dados (.csv) e o notebook em Python (Jupyter) utilizados para dar suporte às análises do meu artigo acadêmico sobre contratos públicos de Informática (TIC) no âmbito de ministérios federais brasileiros, com recorte 2020–2024.
+
+> Objetivo geral (alto nível): diagnosticar e modelar padrões de contratação e caracterização de fornecedores em contratos de TIC, apoiando análises exploratórias, inferenciais e preditivas.
+
+---
+
+## 📄 Artigo associado
+
+- **Título (versão de trabalho):** Compras públicas e contratos em Informática (TIC) na Administração Pública Federal: Análise Inferencial com Dados do Portal Contratos/Compras.gov.br  
+- **Status:** em preparação para submissão/publicação.
+
+> Quando o artigo for publicado (ou aceito), este README será atualizado com referência completa/DOI.
+
+---
+
+## 📦 Estrutura sugerida do repositório
+
+.
+├── notebook/
+│ └── AED_compras.gov_FINAL.ipynb
+├── data/
+│ ├── contratos_1008_com_flags.csv
+│ ├── contratos_amostra_143.csv
+│ ├── amostra_apenas_150_fornecedores.csv
+│ └── contratos_ministerios_consolidados.csv
+├── outputs/
+│ └── (figuras, tabelas e arquivos gerados)
+└── README.md
+
+
+---
+
+## 🧾 Dados incluídos (CSV)
+
+- `contratos_1008_com_flags.csv`: base consolidada de contratos com variáveis derivadas/flags.
+- `contratos_amostra_143.csv`: amostra utilizada em parte das análises inferenciais/modelagem.
+- `amostra_apenas_150_fornecedores.csv`: base de fornecedores com variáveis enriquecidas.
+- `contratos_ministerios_consolidados.csv`: consolidação por ministérios (quando aplicável).
+
+### Separador dos CSV (IMPORTANTE)
+- `contratos_1008_com_flags.csv` → geralmente `sep=";"`
+- `amostra_apenas_150_fornecedores.csv` → geralmente `sep=";"`
+- `contratos_amostra_143.csv` → `sep=","`
+
+---
+
+## 🧠 O que o notebook faz
+
+- Análise Exploratória de Dados (AED): estatística descritiva e visualizações.
+- Inferência estatística: testes não paramétricos e associações (quando aplicável).
+- Modelagem: regressões (ex.: OLS/quantílica/bootstrap, quando aplicável).
+- Machine Learning (quando aplicável): Random Forest e XGBoost, com métricas e interpretação.
+
+---
+
+## 🛠️ Requisitos (ambiente)
+
+Bibliotecas típicas:
+- pandas, numpy, matplotlib, seaborn, scipy
+- scikit-learn
+- statsmodels
+- xgboost
+- imbalanced-learn (se houver balanceamento)
+
+---
+
+## ▶️ Como executar
+
+### Opção A — Anaconda (mais fácil para iniciantes)
+1. Instale o Anaconda.
+2. Abra o Anaconda Prompt e crie um ambiente:
+   ```bash
+   conda create -n comprasgov python=3.11 -y
+   conda activate comprasgov
+
+3. Instale dependências principais:
+
+pip install pandas numpy matplotlib seaborn scipy scikit-learn xgboost imbalanced-learn statsmodels
+
+4. Rode o Jupyter:
+
+jupyter notebook
+
+5. Abra notebook/AED_compras.gov_FINAL.ipynb e execute as células de cima para baixo.
+
