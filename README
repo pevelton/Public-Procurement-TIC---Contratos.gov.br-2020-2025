@@ -87,6 +87,11 @@ Start Jupyter:
 
     Open notebook/AED_compras.gov_FINAL.ipynb and run the cells from top to bottom.
 
+Project:
+The entire project, including the Python scripts in Jupyter Notebook and the .csv files extracted from the Contratos.gov.br portal, is available on GitHub at the following link:
+
+https://github.com/pevelton/Public-Procurement-TIC---Contratos.gov.br-2020-2025
+
 ======================================================================================================
 ======================================================================================================
 
@@ -178,4 +183,9 @@ pip install pandas numpy matplotlib seaborn scipy scikit-learn xgboost imbalance
 jupyter notebook
 
 5. Abra notebook/AED_compras.gov_FINAL.ipynb e execute as células de cima para baixo.
+
+Projeto:
+Todo o projeto com os scripts python no jupyter notebook e os arquivos .csv extraídos do Portal Contratos.gov.br estão disponibilizados no Github no seguinte link:
+
+https://github.com/pevelton/Public-Procurement-TIC---Contratos.gov.br-2020-2025
 
